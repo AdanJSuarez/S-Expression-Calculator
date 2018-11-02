@@ -1,4 +1,4 @@
-# S-expression calculator
+S-expression calculator
 =======================
 
 Write a command line program that acts as a simple calculator: it takes a
