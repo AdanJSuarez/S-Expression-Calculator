@@ -1,21 +1,17 @@
 # S-expression calculator
 =======================
 
-Write a command line program that acts as a simple calculator: it takes a
+This is a command line program that acts as a simple calculator: it takes a
 single argument as an expression and prints out the integer result of
 evaluating it.
 
-Assuming the program is implemented in Python, invocations should look like:
+Invocations look like:
 
     $ ./calc.py 123
     123
 
     $ ./calc.py "(add 12 12)"
     24
-
-You're free to use whatever programming language you like, the invocation above
-is just an example. The general point of taking an argument and printing out
-its evaluation is the only contract to abide by.
 
 Expression syntax
 -----------------
@@ -147,24 +143,16 @@ match integers and function calls to build arbitrary calculations:
 Assumptions
 -----------
 
-A list of assumptions you're allowed to make:
+A list of assumptions:
 
-- Since numbers are specified by digits only, you don't have to deal with
+- Since numbers are specified by digits only, It doesn't have to deal with
   inputting negative numbers.
+- There will always be a single space between the function arguments.
 
-- Depending on your choice of language, you may have to pick a data type to
-  represent your integers and calculations. Pick something that gives you at
-  least 32 bits. None of the calculations will deal with numbers larger than
-  that and you won't be penalized for not dealing with overflow.
+  The tested examples cover:
 
-- You can be pretty lax about error handling. Throwing an exception when in an
-  invalid state is fine.
-
-  The tested examples will always be well formed. That means that:
-
-  - Parenthesis will always be balanced.
-  - Only the `add` and `multiply` functions will be called.
-  - There will always be a single space between the function arguments.
-
+  - Parenthesis are always be balanced.
+  - Only the `add` and `multiply` functions are called.
+  
 [sexp]: https://en.wikipedia.org/wiki/S-expression
 [ebnf]: https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form
